@@ -1,28 +1,28 @@
 # UnityScripts
 
-Scripts sueltos de un **endless runner** para Unity. No hay escena ni `ProjectSettings`: están pensados para copiarse a un proyecto que ya tenga el personaje, el suelo y los obstáculos.
+Loose scripts for a Unity **endless runner**. There is no scene and no `ProjectSettings`: they are meant to be copied into a project that already has the character, the ground, and the obstacles.
 
 ## Scripts
 
-Todos viven en `EndlesRunner/` (el nombre de la carpeta va así en el repo).
+All of them live in `EndlesRunner/` (that is the folder name in the repo).
 
-| Script | Papel |
+| Script | Role |
 | --- | --- |
-| `PlayerController` | Movimiento con `Rigidbody`, salto y límites horizontales (`minX`, `maxX`). Usa un `Animator` |
-| `ObstacleSpawner` | Genera obstáculos |
-| `SpawnController` | Control del spawn |
-| `SpawnManager` | Coordina los spawners |
+| `PlayerController` | `Rigidbody` movement, jump, and horizontal limits (`minX`, `maxX`). Uses an `Animator` |
+| `ObstacleSpawner` | Spawns obstacles |
+| `SpawnController` | Spawn control |
+| `SpawnManager` | Coordinates the spawners |
 
 ## Stack
 
 - Unity
 - C#
 
-## Cómo usarlo
+## How to use it
 
-1. Copia la carpeta `EndlesRunner` a `Assets` de tu proyecto.
-2. Pon `PlayerController` en el jugador. Necesita un `Rigidbody` y, si quieres animación, un `Animator`.
-3. Asigna `groundLayers` para que el salto sepa cuándo está en el suelo.
-4. Coloca `ObstacleSpawner` y `SpawnManager` en un objeto de la escena y enlaza los prefabs en el Inspector.
+1. Copy the `EndlesRunner` folder into your project's `Assets`.
+2. Put `PlayerController` on the player. It needs a `Rigidbody` and, if you want animation, an `Animator`.
+3. Assign `groundLayers` so the jump knows when the player is on the ground.
+4. Place `ObstacleSpawner` and `SpawnManager` on a scene object and link the prefabs in the Inspector.
 
-`speed` y `jumpForce` salen a 5 en el script; se pueden cambiar en el Inspector.
+`speed` and `jumpForce` default to 5 in the script; change them in the Inspector.
